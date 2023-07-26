@@ -1,0 +1,181 @@
+
+* {
+    Margin: 0;
+    Padding: 0;
+    Box-Sizing: Border-Box;
+    Font-Family: 'Poppins', Sans-Serif;
+  }
+  
+  Body {
+    Display: Flex;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Min-Height: 100vh;
+    Background: Cyan;
+  }
+  
+  ::Selection {
+    Color: #Fff;
+    Background: Cyan;
+  }
+  
+  .Wrapper {
+    Width: 420px;
+    Border-Radius: 7px;
+    Background: #Fff;
+    Padding: 25px 28px 45px;
+    Box-Shadow: 7px 7px 20px Rgba(0, 0, 0, 0.05);
+  }
+  
+  .Wrapper Header {
+    Font-Size: 28px;
+    Font-Weight: 500;
+    Text-Align: Center;
+  }
+  
+  .Wrapper .Search {
+    Position: Relative;
+    Margin: 35px 0 18px;
+  }
+  
+  .Search Input {
+    Height: 53px;
+    Width: 100%;
+    Outline: None;
+    Font-Size: 16px;
+    Border-Radius: 5px;
+    Padding: 0 42px;
+    Border: 1px Solid #999;
+  }
+  
+  .Search Input:focus {
+    Padding: 0 41px;
+    Border: 2px Solid Cyan;
+  }
+  
+  .Search Input::Placeholder {
+    Color: #B8B8B8;
+  }
+  
+  .Search :Where(I, Span) {
+    Position: Absolute;
+    Top: 50%;
+    Color: #999;
+    Transform: TranslateY(-50%);
+  }
+  
+  .Search I {
+    Left: 18px;
+    Pointer-Events: None;
+    Font-Size: 16px;
+  }
+  
+  .Search Input:focus~I {
+    Color: Cyan;
+  }
+  
+  .Search Span {
+    Right: 15px;
+    Cursor: Pointer;
+    Font-Size: 18px;
+    Display: None;
+  }
+  
+  .Search Input:valid~Span {
+    Display: Block;
+  }
+  
+  .Wrapper .Info-Text {
+    Font-Size: 13px;
+    Color: #9A9A9A;
+    Margin: -3px 0 -10px;
+  }
+  
+  .Wrapper.Active .Info-Text {
+    Display: None;
+  }
+  
+  .Info-Text Span {
+    Font-Weight: 500;
+  }
+  
+  .Wrapper Ul {
+    Height: 0;
+    Opacity: 0;
+    Padding-Right: 1px;
+    Overflow-Y: Hidden;
+    Transition: All 0.2s Ease;
+  }
+  
+  .Wrapper.Active Ul {
+    Opacity: 1;
+    Height: 303px;
+  }
+  
+  .Wrapper Ul Li {
+    Display: Flex;
+    List-Style: None;
+    Margin-Bottom: 14px;
+    Align-Items: Center;
+    Padding-Bottom: 17px;
+    Border-Bottom: 1px Solid #D9D9D9;
+    Justify-Content: Space-Between;
+  }
+  
+  Ul Li:last-Child {
+    Margin-Bottom: 0;
+    Border-Bottom: 0;
+    Padding-Bottom: 0;
+  }
+  
+  Ul .Word P {
+    Font-Size: 22px;
+    Font-Weight: 500;
+  }
+  
+  Ul .Word Span {
+    Font-Size: 12px;
+    Color: #989898;
+  }
+  
+  Ul .Word I {
+    Color: #999;
+    Font-Size: 15px;
+    Cursor: Pointer;
+  }
+  
+  Ul .Content {
+    Max-Height: 215px;
+    Overflow-Y: Auto;
+  }
+  
+  Ul .Content::-Webkit-Scrollbar {
+    Width: 0px;
+  }
+  
+  .Content Li .Details {
+    Padding-Left: 10px;
+    Border-Radius: 4px 0 0 4px;
+    Border-Left: 3px Solid Cyan;
+  }
+  
+  .Content Li P {
+    Font-Size: 17px;
+    Font-Weight: 500;
+  }
+  
+  .Content Li Span {
+    Font-Size: 15px;
+    Color: #7E7E7E;
+  }
+  
+  .Content .Synonyms .List {
+    Display: Flex;
+    Flex-Wrap: Wrap;
+  }
+  
+  .Content .Synonyms Span {
+    Cursor: Pointer;
+    Margin-Right: 5px;
+    Text-Decoration: Underline;
+  }
